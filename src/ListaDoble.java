@@ -18,13 +18,13 @@ public class ListaDoble {
 
     //Metodo para agregar un NodoDoble al Inicio de la Lista Doble
     public void insertarInicio(int dato){
-
+//TODO para Axel
 
     }
 
     //Metodo para insertar al Final de la lista doble
     public void insertarFinal(int dato){
-
+//TODO para Melissa
     }
 
 
@@ -34,31 +34,31 @@ public class ListaDoble {
     se inserta al final */
 
     public void insertarEnOrden(int dato){
-
+//TODO para Melissa
     }
 
 
     //Eliminar al inicio
     public int eliminarInicio(){
-
+//TODO para Hector
         return -1;
     }
 
     //Eliminar al final
     public int eliminarFinal(){
-
+//TODO para Hector
         return -1;
     }
 
     //Eliminar un elemento
     public int eliminarElemento(int elemento){
-
+//TODO para Maria
         return elemento;
     }
 
     //Metodo para buscar un elemento
     public boolean buscarElemento(int elemento){
-
+//TODO para Maria
         return false;
 
     }
@@ -75,7 +75,7 @@ public class ListaDoble {
 
     //Imprimir los datos de la lista doble de fin a inicio
     public void mostrarFinInicio(){
-
+//TODO para Axel
     }
 
 
