@@ -40,7 +40,7 @@ public class ListaDoble {
 
     //Eliminar al inicio
     public int eliminarInicio(){
-//TODO para Hector
+ //TODO para Hector
         return -1;
     }
 
