@@ -54,10 +54,24 @@ public class Main {
                             JOptionPane.showMessageDialog(null, "Error" + n.getMessage(), "Error de ingreso", 0);
                         }
                         break;
-                    case 2://Insertar un elemento al final TODO @
-                        break;
-                    case 3: //Insertar en orden TODO @
-                        break;
+                   case 2://Insertar un elemento al final
+                            try {
+                                elemento = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingresa el elemento: ", "Insertar al Final: ", 3));
+                                lista.insertarFinal(elemento);
+                            } catch (NumberFormatException n) {
+                                JOptionPane.showMessageDialog(null, "Error" + n.getMessage(), "Error de ingreso", 0);
+                            }
+
+                            break;
+                        case 3: //Insertar en orden
+                            try {
+                                elemento = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingresa el elemento: ", "Insertar Elemento: ", 3));
+                                lista.insertarEnOrden(elemento);
+                            } catch (NumberFormatException n) {
+                                JOptionPane.showMessageDialog(null, "Error" + n.getMessage(), "Error de ingreso", 0);
+                            }
+
+                            break;
                      case 4: //Eliminar al inicio
                             int eliminadoInicio = lista.eliminarInicio();
                             if (eliminadoInicio == -1) {

@@ -32,8 +32,25 @@ public class ListaDoble {
 
 
     //Metodo para insertar al Final de la lista doble
-    public void insertarFinal(int dato) {
-//TODO para Melissa
+    public void insertarFinal(int dato){
+
+        NodoDoble nuevoNodo = new NodoDoble(dato);
+
+        //Validar su la lista esta vacia
+        if (listaVacia()) {
+            inicio = nuevoNodo;
+            fin = nuevoNodo;
+        }
+        else {
+            // El siguiente del nodo actual de 'fin' (el último) apunta al nuevo nodo
+            fin.siguiente = nuevoNodo;
+
+            // El anterior del nuevo nodo apunta al nodo actual de 'fin'
+            nuevoNodo.anterior = fin;
+
+            // Mover el puntero que esta en fin al nuevo nodo
+            fin = nuevoNodo;
+        }
     }
 
 
@@ -42,8 +59,44 @@ public class ListaDoble {
     número mayor al elemento que se encuentre en la lista, si no se encuentar un dato mayor
     se inserta al final */
 
-    public void insertarEnOrden(int dato) {
-//TODO para Melissa
+    public void insertarEnOrden(int dato){
+        NodoDoble nuevoNodo = new NodoDoble(dato);
+
+        //Validar que la lista este vacia
+        if (listaVacia()) {
+            inicio = nuevoNodo;
+            fin = nuevoNodo;
+            return;
+        }
+
+        if (dato <= inicio.dato) {
+            nuevoNodo.siguiente = inicio;
+            inicio.anterior = nuevoNodo;
+            inicio = nuevoNodo;
+            return;
+        }
+
+        NodoDoble actual = inicio;
+
+        while (actual.siguiente != null && actual.siguiente.dato < dato) {
+            actual = actual.siguiente;
+        }
+
+        if (actual.siguiente == null) {
+            actual.siguiente = nuevoNodo;
+            nuevoNodo.anterior = actual;
+            fin = nuevoNodo; // Actualizar fin
+        }
+
+        else {
+            NodoDoble siguiente = actual.siguiente;
+
+            nuevoNodo.siguiente = siguiente;
+            nuevoNodo.anterior = actual;
+
+            actual.siguiente = nuevoNodo;
+            siguiente.anterior = nuevoNodo;
+        }
     }
 
 
