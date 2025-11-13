@@ -2,28 +2,37 @@ public class ListaDoble {
     protected NodoDoble inicio, fin; //Apuntadores para saber donde esta el inicio y el fin de la lista doble
 
     //Constructor para crear la lista doble vacía
-    public ListaDoble(){
+    public ListaDoble() {
         inicio = null;
-        fin =null;
+        fin = null;
     }
 
     //Metodo para saber si la lista doble está vacía
-    public boolean listaVacia(){
-        if(inicio==null){
+    public boolean listaVacia() {
+        if (inicio == null) {
             return true;
-        }else{
+        } else {
             return false;
         }
     }
 
-    //Metodo para agregar un NodoDoble al Inicio de la Lista Doble
-    public void insertarInicio(int dato){
-//TODO para Axel
 
+    //Metodo para agregar un NodoDoble al Inicio de la Lista Doble
+    public void insertarInicio(int dato) {
+//TODO para Axel
+        if (listaVacia()) {
+            inicio = new NodoDoble(dato);
+            fin = inicio;
+        } else {
+            NodoDoble nuevo = new NodoDoble(dato, inicio, null);
+            inicio.anterior = nuevo;
+            inicio = nuevo;
+        }
     }
 
+
     //Metodo para insertar al Final de la lista doble
-    public void insertarFinal(int dato){
+    public void insertarFinal(int dato) {
 //TODO para Melissa
     }
 
@@ -33,19 +42,19 @@ public class ListaDoble {
     número mayor al elemento que se encuentre en la lista, si no se encuentar un dato mayor
     se inserta al final */
 
-    public void insertarEnOrden(int dato){
+    public void insertarEnOrden(int dato) {
 //TODO para Melissa
     }
 
 
     //Eliminar al inicio
-    public int eliminarInicio(){
+    public int eliminarInicio() {
 //TODO para Hector
         return -1;
     }
 
     //Eliminar al final
-    public int eliminarFinal(){
+    public int eliminarFinal() {
 //TODO para Hector
         return -1;
     }
@@ -101,19 +110,25 @@ public class ListaDoble {
         }
 
     //Imprimir los datos de la lista doble de inicio a fin
-    public void mostrarInicioFin(){
-        NodoDoble actual=inicio;
+    public void mostrarInicioFin() {
+        NodoDoble actual = inicio;
         System.out.println();
-        while(actual!=null){
-            System.out.print(actual.dato+" --> ");
+        while (actual != null) {
+            System.out.print(actual.dato + " --> ");
             actual = actual.siguiente;
         }
     }
 
     //Imprimir los datos de la lista doble de fin a inicio
-    public void mostrarFinInicio(){
+    public void mostrarFinInicio() {
 //TODO para Axel
+        NodoDoble actual = fin;
+        System.out.println();
+        while (actual != null) {
+            System.out.print(actual.dato + " --> ");
+            actual = actual.anterior;
+        }
     }
-
-
 }
+
+
