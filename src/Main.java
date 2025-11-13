@@ -67,7 +67,6 @@ public class Main {
                                 JOptionPane.showMessageDialog(null, "Se eliminó el elemento al final: " + eliminadoFinal);
                             }
                             break;
-
                         case 6: //Eliminar TODO @
                             break;
                         case 7: //Buscar elemento TODO @
