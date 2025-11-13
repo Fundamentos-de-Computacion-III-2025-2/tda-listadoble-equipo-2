@@ -47,16 +47,32 @@ public class Main {
                         case 1://Insertar un elemento al inicio TODO @
                             break;
                         case 2://Insertar un elemento al final TODO @
+                            try {
+                                elemento = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingresa el elemento: ", "Insertar al Final: ", 3));
+                                lista.insertarFinal(elemento);
+                            } catch (NumberFormatException n) {
+                                JOptionPane.showMessageDialog(null, "Error" + n.getMessage(), "Error de ingreso", 0);
+                            }
+
                             break;
                         case 3: //Insertar en orden TODO @
+                            try {
+                                elemento = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingresa el elemento: ", "Insertar Elemento: ", 3));
+                                lista.insertarEnOrden(elemento);
+                            } catch (NumberFormatException n) {
+                                JOptionPane.showMessageDialog(null, "Error" + n.getMessage(), "Error de ingreso", 0);
+                            }
+
                             break;
                         case 4: //Eliminar al inicio TODO @
                             break;
                         case 5: //Eliminar al final TODO @
+
                             break;
                         case 6: //Eliminar TODO @
                             break;
                         case 7: //Buscar elemento TODO @
+
                             break;
                         case 8: //MostrarLista TODO @
                             lista.mostrarInicioFin();
