@@ -50,10 +50,24 @@ public class Main {
                             break;
                         case 3: //Insertar en orden TODO @
                             break;
-                        case 4: //Eliminar al inicio TODO @
+                        case 4: //Eliminar al inicio
+                            int eliminadoInicio = lista.eliminarInicio();
+                            if (eliminadoInicio == -1) {
+                                JOptionPane.showMessageDialog(null, "La lista está vacía. No hay elementos para eliminar.");
+                            } else {
+                                JOptionPane.showMessageDialog(null, "Se eliminó el elemento al inicio: " + eliminadoInicio);
+                            }
                             break;
-                        case 5: //Eliminar al final TODO @
+
+                        case 5: //Eliminar al final
+                            int eliminadoFinal = lista.eliminarFinal();
+                            if (eliminadoFinal == -1) {
+                                JOptionPane.showMessageDialog(null, "La lista está vacía. No hay elementos para eliminar.");
+                            } else {
+                                JOptionPane.showMessageDialog(null, "Se eliminó el elemento al final: " + eliminadoFinal);
+                            }
                             break;
+
                         case 6: //Eliminar TODO @
                             break;
                         case 7: //Buscar elemento TODO @
