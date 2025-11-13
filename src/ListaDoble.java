@@ -48,15 +48,48 @@ public class ListaDoble {
 
 
     //Eliminar al inicio
-    public int eliminarInicio() {
-//TODO para Hector
-        return -1;
+    public int eliminarInicio(){
+        // Si la lista está vacía, no hay nada que eliminar
+        if (listaVacia()) {
+            return -1;
+        }
+
+        int elemento = inicio.dato; // Guardamos el dato a eliminar
+
+        // Si solo hay un nodo en la lista
+        if (inicio == fin) {
+            inicio = null;
+            fin = null;
+        } else {
+            // Avanzamos el inicio al siguiente nodo
+            inicio = inicio.siguiente;
+            // Rompemos el enlace hacia atrás del nuevo inicio
+            inicio.anterior = null;
+        }
+        return elemento; // Devolvemos el dato eliminado
     }
 
+
     //Eliminar al final
-    public int eliminarFinal() {
-//TODO para Hector
-        return -1;
+    public int eliminarFinal(){
+        // Si la lista está vacía
+        if (listaVacia()) {
+            return -1;
+        }
+
+        int elemento = fin.dato; // Guardamos el dato del nodo a eliminar
+
+        // Si solo hay un nodo en la lista
+        if (inicio == fin) {
+            inicio = null;
+            fin = null;
+        } else {
+            // Retrocedemos el fin al nodo anterior
+            fin = fin.anterior;
+            // Rompemos el enlace hacia adelante del nuevo fin
+            fin.siguiente = null;
+        }
+        return elemento; // Devolvemos el dato eliminado
     }
 
     //Eliminar un elemento
