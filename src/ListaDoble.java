@@ -19,7 +19,7 @@ public class ListaDoble {
 
     //Metodo para agregar un NodoDoble al Inicio de la Lista Doble
     public void insertarInicio(int dato) {
-//TODO para Axel
+
         if (listaVacia()) {
             inicio = new NodoDoble(dato);
             fin = inicio;
@@ -183,17 +183,21 @@ public class ListaDoble {
         }
 
 
-    //Metodo para buscar un elemento
-    public boolean buscarElemento(int elemento){
 
-            NodoDoble actual = inicio;
-            while (actual != null) {
-                if (actual.dato==(elemento)) {
-                }
-                actual = actual.siguiente; // Avanza hacia adelante
+    //Metodo para buscar un elemento en la lista doble
+    public boolean buscarElemento(int elemento) {
+        NodoDoble actual = inicio; // Empezamos desde el inicio
+
+        while (actual != null) {
+            if (actual.dato == elemento) {
+                return true; // Si lo encontramos, retornamos true
             }
-            return false;
+            actual = actual.siguiente; // Avanzamos al siguiente nodo
         }
+
+        return false; // Si llegamos al final sin encontrarlo
+    }
+
 
     //Imprimir los datos de la lista doble de inicio a fin
     public void mostrarInicioFin() {
@@ -207,7 +211,7 @@ public class ListaDoble {
 
     //Imprimir los datos de la lista doble de fin a inicio
     public void mostrarFinInicio() {
-//TODO para Axel
+
         NodoDoble actual = fin;
         System.out.println();
         while (actual != null) {
