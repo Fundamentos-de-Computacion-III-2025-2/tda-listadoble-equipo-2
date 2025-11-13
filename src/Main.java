@@ -37,8 +37,8 @@ public class Main {
                                     "3. Insertar un elemento en orden\n"+ //TODO @
                                     "4. Eliminar un elemento al inicio\n"+ //TODO @
                                     "5. Eliminar un elemento al final\n"+ //TODO @
-                                    "6. Eliminar un elemento\n"+ //TODO @
-                                    "7. Buscar un elemento\n"+ //TODO @
+                                    "6. Eliminar un elemento\n"+
+                                    "7. Buscar un elemento\n"+
                                     "8. Mostrar los datos de inicio a fin\n"+ //TODO @
                                     "9. Mostrar los datos de fin a inicio\n"+ //TODO @
                                     "10. Salir\n",
@@ -54,9 +54,30 @@ public class Main {
                             break;
                         case 5: //Eliminar al final TODO @
                             break;
-                        case 6: //Eliminar TODO @
+                        case 6: try {//eliminar un elemento cualquiera
+                            elemento = Integer.parseInt(JOptionPane.showInputDialog(null,
+                                    "Ingresa el elemento: ",
+                                    "Eliminar el elemento indicado: ", 3));
+                            lista.eliminarElemento(elemento);
+                            JOptionPane.showMessageDialog(null,"Se eliminó al elemento " + elemento,"Eliminar elemento ",1);
+
+                        }catch (NumberFormatException n) {
+                            JOptionPane.showMessageDialog(null, "Error" + n.getMessage(), "Error de ingreso", 0);
+
+                        }
                             break;
-                        case 7: //Buscar elemento TODO @
+                        case 7: try {//buscar un elemento
+                            elemento = Integer.parseInt(JOptionPane.showInputDialog(null,
+                                    "Ingresa el elemento a buscar: ",
+                                    "Buscar elemento: ", 3));
+                            if(lista.buscarElemento(elemento)){
+                                JOptionPane.showMessageDialog(null,elemento+" encontrado en la lista","Elemento encontrado",1);
+                            }else{
+                                JOptionPane.showMessageDialog(null,elemento+" No encontrado en la lista","Elemento No encontrado",0);
+                            }
+                        }catch (NumberFormatException n){
+                            JOptionPane.showMessageDialog(null,"Error"+n.getMessage(),"Error de ingreso",0);
+                        }
                             break;
                         case 8: //MostrarLista TODO @
                             lista.mostrarInicioFin();
