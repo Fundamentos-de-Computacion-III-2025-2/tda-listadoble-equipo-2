@@ -24,7 +24,6 @@ public class ListaDoble {
 
     //Metodo para insertar al Final de la lista doble
     public void insertarFinal(int dato){
-//TODO para Melissa
 
         NodoDoble nuevoNodo = new NodoDoble(dato);
 
@@ -52,7 +51,6 @@ public class ListaDoble {
     se inserta al final */
 
     public void insertarEnOrden(int dato){
-//TODO para Melissa
         NodoDoble nuevoNodo = new NodoDoble(dato);
 
         //Validar que la lista este vacia

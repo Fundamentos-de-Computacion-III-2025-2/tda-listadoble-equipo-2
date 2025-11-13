@@ -46,7 +46,7 @@ public class Main {
                     switch (opcion) {
                         case 1://Insertar un elemento al inicio TODO @
                             break;
-                        case 2://Insertar un elemento al final TODO @
+                        case 2://Insertar un elemento al final
                             try {
                                 elemento = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingresa el elemento: ", "Insertar al Final: ", 3));
                                 lista.insertarFinal(elemento);
@@ -55,7 +55,7 @@ public class Main {
                             }
 
                             break;
-                        case 3: //Insertar en orden TODO @
+                        case 3: //Insertar en orden
                             try {
                                 elemento = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingresa el elemento: ", "Insertar Elemento: ", 3));
                                 lista.insertarEnOrden(elemento);
@@ -67,12 +67,10 @@ public class Main {
                         case 4: //Eliminar al inicio TODO @
                             break;
                         case 5: //Eliminar al final TODO @
-
                             break;
                         case 6: //Eliminar TODO @
                             break;
                         case 7: //Buscar elemento TODO @
-
                             break;
                         case 8: //MostrarLista TODO @
                             lista.mostrarInicioFin();
